@@ -1,0 +1,108 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.14.0.0
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Christoph Lauer, Christoph Lauer Engineering, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.14.0.0
+Toolchain Path:  C:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 1 (build 106)
+Assembler:       Armasm.exe V5.05 update 1 (build 106)
+Linker/Locator:  ArmLink.exe V5.05 update 1 (build 106)
+Library Manager: ArmAr.exe V5.05 update 1 (build 106)
+Hex Converter:   FromElf.exe V5.05 update 1 (build 106)
+CPU DLL:         SARMCM3.DLL V5.14.0.0
+Dialog DLL:      DCM.DLL V1.13.1.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V2.0.14.0_KEIL
+Dialog DLL:      TCM.DLL V1.14.4.0
+ 
+<h2>Project:</h2>
+\\vmware-host\Shared Folders\christoph\Development\EMBEDDED\ARM\STM32F4 Discovery\src\CAN\CAN.uvprojx
+Project File Date:  05/24/2015
+
+<h2>Output:</h2>
+Build target 'STM32F407 Flash'
+compiling CAN.c...
+compiling CanDemo.c...
+compiling LED.c...
+compiling Retarget.c...
+compiling Serial.c...
+linking...
+Program Size: Code=8428 RO-data=456 RW-data=72 ZI-data=1088  
+".\Flash\CAN.axf" - 0 Error(s), 0 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.4.3.0.pack
+                ARM::CMSIS:CORE:4.1.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 4.1.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.4.0.pack
+                ::Device:STM32Cube Framework (API)
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: STM32Cube Framework Version: 
+   * Component: Startup Version: 2.1.0
+   * Component: Classic Version: 1.1.0
+   * Component: Common Version: 1.1.0
+   * Component: Cortex Version: 1.1.0
+   * Component: GPIO Version: 1.1.0
+   * Component: PWR Version: 1.1.0
+   * Component: RCC Version: 1.1.0
+
+<h2>Collection of Component include folders:</h2>
+  \\vmware-host\Shared Folders\christoph\Development\EMBEDDED\ARM\STM32F4 Discovery\src\CAN\RTE
+  \\vmware-host\Shared Folders\christoph\Development\EMBEDDED\ARM\STM32F4 Discovery\src\CAN\RTE\Device\STM32F407VGTx
+  C:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include
+  C:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.4.0
+  C:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.4.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+  C:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.4.0\Drivers\STM32F4xx_HAL_Driver\Inc
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:4.1.0
+
+   * Component: ::Device:STM32Cube Framework (API)
+
+   * Component: Keil::Device:Startup:2.1.0
+      Source file:   MDK\Device\Source\ARM\STM32F40xxx_41xxx_OPT.s
+      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
+      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f407xx.s
+      Source file:   MDK\Device\Source\ARM\system_stm32f4xx.c
+
+   * Component: Keil::Device:STM32Cube Framework:Classic:1.1.0
+      Include file:  CMSIS\Driver\Config\RTE_Device.h
+      Include file:  MDK\Templates\Inc\stm32f4xx_hal_conf.h
+      Source file:   MDK\Templates\Src\stm32f4xx_hal_msp.c
+      Include file:  MDK\Templates\Inc\stm32f4xx_it.h
+      Source file:   MDK\Templates\Src\stm32f4xx_it.c
+      Include file:  MDK\Templates\Inc\main.h
+      Source file:   MDK\Templates\Src\main.c
+
+   * Component: Keil::Device:STM32Cube HAL:Common:1.1.0
+      Include file:  Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c
+
+   * Component: Keil::Device:STM32Cube HAL:Cortex:1.1.0
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c
+
+   * Component: Keil::Device:STM32Cube HAL:GPIO:1.1.0
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c
+
+   * Component: Keil::Device:STM32Cube HAL:PWR:1.1.0
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c
+
+   * Component: Keil::Device:STM32Cube HAL:RCC:1.1.0
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c
+</pre>
+</body>
+</html>

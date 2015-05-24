@@ -1,0 +1,19 @@
+--cpu Cortex-M4.fp
+".\flash\can.o"
+".\flash\candemo.o"
+".\flash\led.o"
+".\flash\retarget.o"
+".\flash\serial.o"
+".\flash\stm32f4xx_hal.o"
+".\flash\stm32f4xx_hal_cortex.o"
+".\flash\stm32f4xx_hal_gpio.o"
+".\flash\stm32f4xx_hal_pwr.o"
+".\flash\stm32f4xx_hal_pwr_ex.o"
+".\flash\stm32f4xx_hal_rcc.o"
+".\flash\stm32f4xx_hal_rcc_ex.o"
+".\flash\startup_stm32f407xx.o"
+".\flash\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter ".\Flash\CAN.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Flash\CAN.map" -o .\Flash\CAN.axf
