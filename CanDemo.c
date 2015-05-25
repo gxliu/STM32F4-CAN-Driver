@@ -8,6 +8,7 @@
 unsigned int val_Tx = 0, val_Rx = 0;              /* Globals used for display */
 
 volatile uint32_t msTicks;                        /* counts 1ms timeTicks     */
+
 /*----------------------------------------------------------------------------
   SysTick_Handler
  *----------------------------------------------------------------------------*/
@@ -68,7 +69,6 @@ void SystemClock_Config(void) {
   HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_5);
 }
 
-
 /*----------------------------------------------------------------------------
   initialize CAN interface
  *----------------------------------------------------------------------------*/
@@ -82,18 +82,16 @@ void can_Init (void) {
   CAN_waitReady (2);                              /* wait til tx mbx is empty */
 }
 
-
-
 /*----------------------------------------------------------------------------
   MAIN function
  *----------------------------------------------------------------------------*/
 int main (void)  {
   int i;
-SystemClock_Config();
+  SystemClock_Config();
   LED_Init ();                                    /* initialize the LEDs      */
 
   SystemCoreClockUpdate();                        /* Get Core Clock Frequency */
-  SysTick_Config(SystemCoreClock /1000);         /* SysTick 1 msec irq       */
+  SysTick_Config(SystemCoreClock /1000);          /* SysTick 1 msec irq       */
 	can_Init ();                                    /* initialize CAN interface */
 
   CAN_TxMsg[1].id = 33;                           /* initialize msg to send   */
@@ -122,6 +120,5 @@ SystemClock_Config();
 
     val_display ();                               /* display TX and RX values */
     Delay (500);                                  /* delay for 500ms          */
-
   }
 }
