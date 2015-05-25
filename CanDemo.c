@@ -73,7 +73,6 @@ void SystemClock_Config(void) {
   initialize CAN interface
  *----------------------------------------------------------------------------*/
 void can_Init (void) {
-
   CAN_setup (1);                                  /* setup CAN Controller #1  */
   CAN_setup (2);                                  /* setup CAN Controller #2  */
   CAN_wrFilter (1, 33, STANDARD_FORMAT);          /* Enable reception of msgs */
@@ -93,7 +92,6 @@ int main (void)  {
 SystemClock_Config();
   LED_Init ();                                    /* initialize the LEDs      */
 
-
   SystemCoreClockUpdate();                        /* Get Core Clock Frequency */
   SysTick_Config(SystemCoreClock /1000);         /* SysTick 1 msec irq       */
 	can_Init ();                                    /* initialize CAN interface */
@@ -110,7 +108,6 @@ SystemClock_Config();
 
     if (CAN_TxRdy[1]) {                           /* tx msg on CAN Ctrl #2    */
       CAN_TxRdy[1] = 0;
-
       CAN_TxMsg[1].data[0] = val_Tx;              /* data[0] = ADC value      */
 			for (i = 1; i < 8; i++) CAN_TxMsg[1].data[i] = 0x77;
       CAN_wrMsg (2, &CAN_TxMsg[1]);               /* transmit message         */
@@ -120,7 +117,6 @@ SystemClock_Config();
 
     if (CAN_RxRdy[0]) {                           /* rx msg on CAN Ctrl #1    */
       CAN_RxRdy[0] = 0;
-
       val_Rx = CAN_RxMsg[0].data[0];
     }
 

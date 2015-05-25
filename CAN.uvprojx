@@ -365,7 +365,7 @@
               <MiscControls></MiscControls>
               <Define>HSE_VALUE=8000000    __DBG_ITM  __NO_SYSTICK</Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>.\RTE;.\RTE\Device\STM32F407VGTx</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
